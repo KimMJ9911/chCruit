@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: chCruit
+
+  servlet:
+    multipart:
+      enabled: true
+
+  cloud:
+    aws:
+      credentials:
+        access-key: YOUR_AWS_ACCESS_KEY # AWS Access Key
+        secret-key: YOUR_AWS_SECRET_KEY # AWS Secret Key
+      s3:
+        bucket: your-s3-bucket-name # ???? S3 ?? ??
+      region:
+        static: ap-northeast-2 # AWS ?? (?: ??)
+      stack:
+        auto: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: verox0304@gmail.com
+    password: 1234
+    properties:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+
+  jwt:
+    JWT_SECRET_KEY : pT+HzrT8gQkRpGJzxrfEFiS2yZPLClVhRxn3GuRIq2U=
+    ACCESS_TOKEN_EXPIRE_TIME : 1800000   # 30?
+    REFRESH_TOKEN_EXPIRE_TIME : 2592000000   # 30?
+
